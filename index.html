@@ -35,27 +35,7 @@
                 transform: scale(0.9);
             }
 
-            /* Part 1 */
-            #file-dropzone {
-                width: 400px;
-                height: 200px;
-            }
-
-            /* Part 2 */
-            .box {
-                width: 100px;
-                height: 100px;
-                cursor: move;
-                user-select: none;
-            }
-            .box[data-item="A"] {
-                background-color: #FFDCA9;
-                border-color: #F97D02;
-            }
-            .box[data-item="B"] {
-                background-color: #BCF8B9;
-                border-color: #3CB43C;
-            }
+    
             
             /* Part 3 */
             .interact.dropzone {
@@ -91,17 +71,6 @@
     <body>
         <h1>Drag &amp; Drop</h1>
 
-        <!-- Part 1 -->
-        <div id="file-dropzone" class="dropzone">Drop files here</div>
-        <p>Selected files:</p>
-        <ul id="output"></ul>
-
-        <!-- Part 2 -->
-        <div class="container">
-            <div draggable="true" class="dropzone box" data-item="A">A</div>
-            <div draggable="true" class="dropzone box" data-item="B">B</div>
-            <div draggable="true" class="dropzone box" data-item="C">C</div>
-        </div>
 
         <!-- Part 3 -->
         <div class="draggable itemA">A</div>
