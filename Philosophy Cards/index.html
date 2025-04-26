@@ -14,9 +14,9 @@
             <p>Welcome to my new app where you can search the card library for philosophical concepts and interact.</p>
         </div>
         <div class="button-container">
-            <input type="text">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for cards...">
             <button type="button">Click</button>
-        </div>
+        </div>        
         <div class="library-section">
             <div class="card-container">
                 <h2>Appeal To Emotion</h2>
@@ -53,5 +53,29 @@
             
         </div>
     </div>
+
+    <script>
+        console.log("Script loaded successfully");
+        
+        function myFunction() {
+          var input, filter, cards, cardTitle, i, txtValue;
+          input = document.getElementById('myInput');
+          filter = input.value.toUpperCase();
+          cards = document.getElementsByClassName('card-container');
+        
+          for (i = 0; i < cards.length; i++) {
+            cardTitle = cards[i].getElementsByTagName("h2")[0];
+            if (cardTitle) {
+              txtValue = cardTitle.textContent || cardTitle.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+              } else {
+                cards[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        </script>
+        
 </body>
 </html>
