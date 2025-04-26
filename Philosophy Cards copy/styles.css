@@ -46,14 +46,14 @@
 
 .card-container h2 {
   height: auto; /* Set a fixed height for the title */
-  width: auto;
+  width: 100%;
   flex-wrap: wrap;
-  color: #2e96ff; /* Text color */
+  color: #000000; /* Text color */
   font-size: 16px; /* Font size */
-  border: solid 2px #000000; /* Border color */
-  border-radius: 8px;;
+  border: solid 2px #00d9ff7c; /* Border color */
+  border-radius: 8px;
   align-content: center;
-  padding: 10px;
+  padding: 8px;
   overflow: visible;
 }
 
