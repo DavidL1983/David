@@ -1,3 +1,4 @@
+<!-- Philosophy Cards Library App -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,7 @@
         <div class="button-container">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for cards...">
             <button type="button">Click</button>
+            <button type="button" id="clearButton">Clear</button>
         </div>        
         <div class="library-section">
             <div class="card-container">
@@ -75,6 +77,11 @@
             }       
           }
         }
+                document.getElementById('clearButton').addEventListener('click', function() {
+                document.getElementById('myInput').value = '';
+                myFunction(); // Re-run the search to show all cards again
+        });
+
         </script>
         
 </body>
